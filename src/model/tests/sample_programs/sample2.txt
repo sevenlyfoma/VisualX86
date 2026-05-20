@@ -1,0 +1,4 @@
+total: addq $4, %rax
+addq $4, %rbx
+addq $4, %rcx
+jmp total

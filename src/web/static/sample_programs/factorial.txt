@@ -1,0 +1,8 @@
+movq $7, %rbx
+movq $1, %rax
+loop: cmpq $0, %rbx
+jz end
+mulq %rbx
+addq $-1, %rbx
+jmp loop
+end: movq %rax, 0xf0

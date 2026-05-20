@@ -1,0 +1,18 @@
+[package]
+name = "model"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.11.0"
+wasm-bindgen = "0.2.84"
+serde_json = { version = "1.0", default-features = false, features = ["alloc", "preserve_order"] }
+serde = { version = "1.0", features = ["derive"] }
+#jsonschema = "0.26.1"
+getrandom = { version = "0.2", features = ["js"] }
+nom = "7.1.3"

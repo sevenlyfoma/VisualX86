@@ -1,0 +1,36 @@
+#main-grid {
+    display: grid;
+    column-gap: 10px;
+    /* 4 'columns', 3 are allocated to the svg, so we have a 1 to 3 ratio */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    background-color: #ffffff;
+    padding: 10px;
+  }
+#help-grid {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 10px;
+}
+#instruction-grid {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.grid-item {
+    text-align: center;
+}
+
+#entry-section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+} 
+
+
+#button-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 

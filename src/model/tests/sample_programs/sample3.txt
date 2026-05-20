@@ -1,0 +1,3 @@
+movq -4(%rax), -40(%rbx)
+addq -4(%rax), -40(%rbx)
+addq $2147483647, %rax

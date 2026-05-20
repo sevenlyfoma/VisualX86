@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>x86 Simulator Instruction Listing</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body style="background-color:rgb(216, 212, 212)">
+    <h1 >x86 Simulator Info Page</h1>
+    
+    <p>This simulator only supports a small subset of instructions.</p>
+    <p>Sample Instruction:</p>
+    <p style="text-indent:50px;">addq $1, %rax</p>
+    <p>using AT&T syntax, %rax is the destination operand, operands are seperated with a comma</p>
+    <p style="color:rgb(216, 212, 212)">-</p>
+
+    <p>Jumps are usable like this</p>
+    <p style="text-indent:50px;">loop: addq $4 %rax</p>
+    <p style="text-indent:50px;">jmp loop</p>
+    
+    <div class="grid-container" id="help-grid" style="background-color:rgb(216, 212, 212)">
+        
+        <div>
+            <p>List of usable instructions</p>
+            <div class="grid-container" id="instruction-grid" style="background-color:rgb(216, 212, 212)">
+                <div> <table>
+                    <tr> <th>Instruction</th> <th>Example</th> </tr>
+                    <tr> <td>movq</td> <td>movq %rax %rbx</td> </tr>
+                    <tr> <td>addq</td> <td>addq $4 %rax</td> </tr>
+                    <tr> <td>subq</td> <td>subq $4 %rax</td> </tr>
+                    <tr> <td>mulq</td> <td>mulq $4</td> </tr>
+                    <tr> <td>divq</td> <td>divq $4</td> </tr>
+                    <tr> <td>imulq</td> <td>imulq $4</td> </tr>
+                    <tr> <td>idivq</td> <td>idivq $4</td> </tr>
+                    <tr> <td>cmpq</td> <td>cmpq %rax %rbx</td> </tr>
+                    <tr> <td>andq</td> <td>andq $1 %rax</td> </tr>
+                    <tr> <td>orq</td> <td>orq $1 %rax</td> </tr>
+                    <tr> <td>xorq</td> <td>xorq $1 %rax</td> </tr>
+                  </table>
+                </div>
+                <div> <table>
+                    <tr> <th>Instruction</th> <th>Example</th> </tr>
+                    <tr> <td>notq</td> <td>notq %rax</td> </tr>
+                    <tr> <td>salq</td> <td>salq $2 %rax</td> </tr>
+                    <tr> <td>sarq</td> <td>sarq $2 %rax</td> </tr>
+                    <tr> <td>shlq</td> <td>shlq $2 %rax</td> </tr>
+                    <tr> <td>shrq</td> <td>sarq $2 %rax</td> </tr>
+                    <tr> <td>jmp</td> <td>jmp loop</td> </tr>
+                    <tr> <td>jz</td> <td>jz loop</td> </tr>
+                    <tr> <td>jc</td> <td>jc loop</td> </tr>
+                    <tr> <td>jo</td> <td>jo loop</td> </tr>
+                    <tr> <td>js</td> <td>js loop</td> </tr>
+                  </table>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div>
+            <p>List of usable operand types modes</p>
+            <div>
+                <table>
+                <tr> <th>Operand</th> <th>Example</th> </tr>
+                <tr> <td>Immediate</td> <td>$10</td> </tr>
+                <tr> <td>register</td> <td>%rax</td> </tr>
+                <tr> <td>Direct Address</td> <td>0xf0</td> </tr>
+                <tr> <td>Indirect Address</td> <td>(%rax)</td> </tr>
+                <tr> <td>Offset Address</td> <td>-8(%rsp)</td> </tr>
+                <tr> <td>Jump target</td> <td>loop</td> </tr>
+              </table>
+            </div>
+            
+        </div>
+    </div>
+
+    
+</body>
+
+
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>x86 Simulator</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body style="background-color:rgb(216, 212, 212)">
+    <h1 >x86 Simulator</h1>
+    
+
+    <div class="grid-container" id="main-grid" style="background-color:rgb(216, 212, 212)">
+        
+        <div class="grid-item" id="entry-section">
+
+            <select id="sample_selection">
+                <option value="sample programs">Sample Programs</option>
+                <option value="fibonacci">Fibonacci</option>
+                <option value="factorial">Factorial</option>
+                <option value="power">Power</option>
+            </select>
+
+            <textarea id="entrybox" name="entrybox" rows="30" cols="33" placeholder="Enter Instructions"></textarea>
+            
+            <div id="button-section">
+                <p id=error_section></p>
+                <button id="load_button" type="button">Load</button>
+                <button id="ustep_button" type="button">Micro Step</button>
+                <button id="step_button" type="button">Step</button>
+                <button id="help_button" type="button" onclick="window.open('./help.html')">Instruction Listing</button>
+            </div>
+            
+        </div>
+            
+        <div class="grid-item" id="svg-section">
+            <!-- 300% width, take up 3 "columns" in grid -->
+            <svg width="300%" height="100%" style="background-color:rgb(216, 212, 212)" id="main-area" viewBox="0 0 1500 825"></svg>
+        </div>
+        
+</body>
+
+<script type="module" src="myScript.js"></script>
+
+<script type="module">
+
+    //https://stackoverflow.com/a/44591205 [last accessed 2025-04-09]
+    import {micro_step_clicked,step_clicked, load_clicked, loadFile} from './myScript.js'
+    
+    document.querySelector('#load_button').addEventListener('click', load_clicked)
+    document.querySelector('#ustep_button').addEventListener('click', micro_step_clicked)
+    document.querySelector('#step_button').addEventListener('click', step_clicked)
+    document.querySelector('#sample_selection').addEventListener('change', loadFile)
+
+</script>
+
+<script type="module" src="myScript.js"></script>
+
+<script type="module" src="d3funcs.js"></script>
+
+</html>
