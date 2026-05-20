@@ -75,7 +75,7 @@ app.get("/sample_programs/power.txt", function (req, res){
     res.sendFile(path.join(__dirname, "/static/sample_programs/power.txt"));
 });
 
-app.listen(port, '127.0.0.1', function (){
+app.listen(port, '0.0.0.0', function (){
     console.log('Listening on port ' + port);
 });
 
